@@ -6859,7 +6859,7 @@ class Dreamehome extends utils.Adapter {
 
     try {
       // Baue die URL für History-Endpunkt
-      const historyUrl = const historyUrl = `https://${DH_Region}.iot.mova-tech.com:13267/mova-user-iot/iotstatus/history`;
+      const historyUrl = `https://${DH_Region}.iot.mova-tech.com:13267/mova-user-iot/iotstatus/history`;
 
       const response = await this.DH_URLRequest(historyUrl, params);
       this.log.info(historyUrl + ' | ' + JSON.stringify(response) + ' | Response: ' + JSON.stringify(response.data));
