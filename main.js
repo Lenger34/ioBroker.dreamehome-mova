@@ -3050,7 +3050,8 @@ let DH_URLUSA = new Buffer.from(URLUSA, 'base64');
 const URLDRLC = 'Z2lneGxtcXdaXTdvV1pVRg=='; // Mova RLC Key
 let DH_URLDRLC = new Buffer.from(URLDRLC, 'base64');
 
-const URLAUTH = 'QmFzaWMgYlc5MllWOWhjSEE2VmpkTGIwTm9URmN4ZGtoQlEzRkhZZz09'; // Mova Authorization
+// THIS IS THE FIXED LINE! Notice the "c4" instead of "N4" in the middle.
+const URLAUTH = 'QmFzaWMgYlc5MllWOWhjSEE2VmpkTGIwTm9URmM4ZGtoQlEzRkhZZz09'; // Mova Authorization
 let DH_URLAUTH = new Buffer.from(URLAUTH, 'base64');
 
 const DHURLSENDA = 'L2RyZWFtZS1pb3QtY29tLQ=='; // /dreame-iot-com-
