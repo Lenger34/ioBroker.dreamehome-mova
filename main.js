@@ -3025,23 +3025,22 @@ const {
 
 // Import Learning System
 const LearningSystem = require('./lib/learningSystem.js');
-
-const URLTK = 'aHR0cHM6Ly9ldS5pb3QubW92YS10ZWNoLmNvbToxMzI2Ny9tb3ZhLWF1dGgvb2F1dGgvdG9rZW4='; // /mova-auth/oauth/token
+const URLTK = 'aHR0cHM6Ly9ldS5pb3QubW92YS10ZWNoLmNvbToxMzI2Ny9kcmVhbWUtYXV0aC9vYXV0aC90b2tlbg=='; // /dreame-auth/oauth/token
 let DH_URLTK = new Buffer.from(URLTK, 'base64');
 
-const URLLST = 'aHR0cHM6Ly9ldS5pb3QubW92YS10ZWNoLmNvbToxMzI2Ny9tb3ZhLXVzZXItaW90L2lvdHVzZXJiaW5kL2RldmljZS9saXN0VjI='; // /mova-user-iot/iotuserbind/device/listV2
+const URLLST = 'aHR0cHM6Ly9ldS5pb3QubW92YS10ZWNoLmNvbToxMzI2Ny9kcmVhbWUtdXNlci1pb3QvaW90dXNlcmJpbmQvZGV2aWNlL2xpc3RWMg=='; // /dreame-user-iot/iotuserbind/device/listV2
 let DH_URLLST = new Buffer.from(URLLST, 'base64');
 
-const URLINF = 'aHR0cHM6Ly9ldS5pb3QubW92YS10ZWNoLmNvbToxMzI2Ny9tb3ZhLXVzZXItaW90L2lvdHVzZXJiaW5kL2RldmljZS9pbmZv'; // /mova-user-iot/iotuserbind/device/info
+const URLINF = 'aHR0cHM6Ly9ldS5pb3QubW92YS10ZWNoLmNvbToxMzI2Ny9kcmVhbWUtdXNlci1pb3QvaW90dXNlcmJpbmQvZGV2aWNlL2luZm8='; // /dreame-user-iot/iotuserbind/device/info
 let DH_URLINF = new Buffer.from(URLINF, 'base64');
 
-const URLOTCINF = 'aHR0cHM6Ly9ldS5pb3QubW92YS10ZWNoLmNvbToxMzI2Ny9tb3ZhLXVzZXItaW90L2lvdHN0YXR1cy9kZXZPVENJbmZv'; // /mova-user-iot/iotstatus/devOTCInfo
+const URLOTCINF = 'aHR0cHM6Ly9ldS5pb3QubW92YS10ZWNoLmNvbToxMzI2Ny9kcmVhbWUtdXNlci1pb3QvaW90c3RhdHVzL2Rldk9UQ0luZm8='; // /dreame-user-iot/iotstatus/devOTCInfo
 let DH_URLOTCINF = new Buffer.from(URLOTCINF, 'base64');
 
-const URLPROP = 'aHR0cHM6Ly9ldS5pb3QubW92YS10ZWNoLmNvbToxMzI2Ny9tb3ZhLXVzZXItaW90L2lvdHN0YXR1cy9wcm9wcw=='; // /mova-user-iot/iotstatus/props
+const URLPROP = 'aHR0cHM6Ly9ldS5pb3QubW92YS10ZWNoLmNvbToxMzI2Ny9kcmVhbWUtdXNlci1pb3QvaW90c3RhdHVzL3Byb3Bz'; // /dreame-user-iot/iotstatus/props
 let DH_URLPROP = new Buffer.from(URLPROP, 'base64');
 
-const URLDOWNURL = 'aHR0cHM6Ly9ldS5pb3QubW92YS10ZWNoLmNvbToxMzI2Ny9tb3ZhLXVzZXItaW90L2lvdGZpbGUvZ2V0RG93bmxvYWRVcmw='; // /mova-user-iot/iotfile/getDownloadUrl
+const URLDOWNURL = 'aHR0cHM6Ly9ldS5pb3QubW92YS10ZWNoLmNvbToxMzI2Ny9kcmVhbWUtdXNlci1pb3QvaW90ZmlsZS9nZXREb3dubG9hZFVybA=='; // /dreame-user-iot/iotfile/getDownloadUrl
 let DH_URLDOWNURL = new Buffer.from(URLDOWNURL, 'base64');
 
 const URLUSA = 'TW92YV9TbWFydGhvbWUvMS41LjU5IChpUGhvbmU7IGlPUyAxNi4wOyBTY2FsZS8zLjAwKQ=='; // Mova_Smarthome User Agent
@@ -3053,7 +3052,7 @@ let DH_URLDRLC = new Buffer.from(URLDRLC, 'base64');
 const URLAUTH = 'QmFzaWMgYlc5MllWOWhjSEE2VmpkTGIwTm9URmN4ZGtoQlEzRkhZZz09'; // Mova Authorization
 let DH_URLAUTH = new Buffer.from(URLAUTH, 'base64');
 
-const DHURLSENDA = 'L21vdmEtaW90LWNvbS0='; // /mova-iot-com-
+const DHURLSENDA = 'L2RyZWFtZS1pb3QtY29tLQ=='; // /dreame-iot-com-
 let DH_DHURLSENDA = new Buffer.from(DHURLSENDA, 'base64');
 
 const DHURLSENDB = 'L2RldmljZS9zZW5kQ29tbWFuZA=='; // /device/sendCommand
@@ -3062,12 +3061,11 @@ let DH_DHURLSENDB = new Buffer.from(DHURLSENDB, 'base64');
 const DHURLSENDDOM = 'LmlvdC5tb3ZhLXRlY2guY29tOjEzMjY3'; // .iot.mova-tech.com:13267
 let DH_DHURLSENDDOM = new Buffer.from(DHURLSENDDOM, 'base64');
 
-const DHURLHIS = 'aHR0cHM6Ly9ldS5pb3QubW92YS10ZWNoLmNvbToxMzI2Ny9tb3ZhLXVzZXItaW90L2lvdHN0YXR1cy9oaXN0b3J5'; // /mova-user-iot/iotstatus/history
+const DHURLHIS = 'aHR0cHM6Ly9ldS5pb3QubW92YS10ZWNoLmNvbToxMzI2Ny9kcmVhbWUtdXNlci1pb3QvaW90c3RhdHVzL2hpc3Rvcnk='; // /dreame-user-iot/iotstatus/history
 const DH_DHURLHIS = new Buffer.from(DHURLHIS, 'base64');
 
 const DHURLGDF = 'aHR0cHM6Ly9ldS5pb3QubW92YS10ZWNoLmNvbToxMzI2Ny9maWxlLWJyaWRnZS91c2VyL2dldERlaXZpY2VGaWxl'; // /file-bridge/user/getDeiviceFile
 const DH_DHURLGDF = new Buffer.from(DHURLGDF, 'base64');
-
 let DH_Map = {};
 let In_path = '';
 let DH_Auth = '',
@@ -6859,8 +6857,7 @@ class Dreamehome extends utils.Adapter {
 
     try {
       // Baue die URL für History-Endpunkt
-      const historyUrl = `https://${DH_Region}.iot.mova-tech.com:13267/mova-user-iot/iotstatus/history`;
-
+      const historyUrl = `https://${DH_Region}.iot.mova-tech.com:13267/dreame-user-iot/iotstatus/history`;
       const response = await this.DH_URLRequest(historyUrl, params);
       this.log.info(historyUrl + ' | ' + JSON.stringify(response) + ' | Response: ' + JSON.stringify(response.data));
       if (response && response.data && response.data.list) {
