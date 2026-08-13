@@ -48,7 +48,7 @@
     "icon": "dreamehome.png",
     "enabled": true,
     "extIcon": "https://raw.githubusercontent.com/spayrosam/ioBroker.dreamehome/main/admin/dreamehome.png",
-    "readme": "https://github.com/Spayrosam/ioBroker.dreamehome/blob/main/README.md",
+    "readme": "https://github.com/Lenger34/ioBroker.dreamehome-mova",
     "loglevel": "info",
     "tier": 3,
     "mode": "daemon",

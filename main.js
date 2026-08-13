@@ -3026,33 +3026,46 @@ const {
 // Import Learning System
 const LearningSystem = require('./lib/learningSystem.js');
 
-const URLTK = 'aHR0cHM6Ly9ldS5pb3QuZHJlYW1lLnRlY2g6MTMyNjcvZHJlYW1lLWF1dGgvb2F1dGgvdG9rZW4=';
+const URLTK = 'aHR0cHM6Ly9ldS5pb3QubW92YS10ZWNoLmNvbToxMzI2Ny9tb3ZhLWF1dGgvb2F1dGgvdG9rZW4='; // /mova-auth/oauth/token
 let DH_URLTK = new Buffer.from(URLTK, 'base64');
-const URLLST = 'aHR0cHM6Ly9ldS5pb3QuZHJlYW1lLnRlY2g6MTMyNjcvZHJlYW1lLXVzZXItaW90L2lvdHVzZXJiaW5kL2RldmljZS9saXN0VjI=';
+
+const URLLST = 'aHR0cHM6Ly9ldS5pb3QubW92YS10ZWNoLmNvbToxMzI2Ny9tb3ZhLXVzZXItaW90L2lvdHVzZXJiaW5kL2RldmljZS9saXN0VjI='; // /mova-user-iot/iotuserbind/device/listV2
 let DH_URLLST = new Buffer.from(URLLST, 'base64');
-const URLINF = 'aHR0cHM6Ly9ldS5pb3QuZHJlYW1lLnRlY2g6MTMyNjcvZHJlYW1lLXVzZXItaW90L2lvdHVzZXJiaW5kL2RldmljZS9pbmZv';
+
+const URLINF = 'aHR0cHM6Ly9ldS5pb3QubW92YS10ZWNoLmNvbToxMzI2Ny9tb3ZhLXVzZXItaW90L2lvdHVzZXJiaW5kL2RldmljZS9pbmZv'; // /mova-user-iot/iotuserbind/device/info
 let DH_URLINF = new Buffer.from(URLINF, 'base64');
-const URLOTCINF = 'aHR0cHM6Ly9ldS5pb3QuZHJlYW1lLnRlY2g6MTMyNjcvZHJlYW1lLXVzZXItaW90L2lvdHN0YXR1cy9kZXZPVENJbmZv';
+
+const URLOTCINF = 'aHR0cHM6Ly9ldS5pb3QubW92YS10ZWNoLmNvbToxMzI2Ny9tb3ZhLXVzZXItaW90L2lvdHN0YXR1cy9kZXZPVENJbmZv'; // /mova-user-iot/iotstatus/devOTCInfo
 let DH_URLOTCINF = new Buffer.from(URLOTCINF, 'base64');
-const URLPROP = 'aHR0cHM6Ly9ldS5pb3QuZHJlYW1lLnRlY2g6MTMyNjcvZHJlYW1lLXVzZXItaW90L2lvdHN0YXR1cy9wcm9wcw==';
+
+const URLPROP = 'aHR0cHM6Ly9ldS5pb3QubW92YS10ZWNoLmNvbToxMzI2Ny9tb3ZhLXVzZXItaW90L2lvdHN0YXR1cy9wcm9wcw=='; // /mova-user-iot/iotstatus/props
 let DH_URLPROP = new Buffer.from(URLPROP, 'base64');
-const URLDOWNURL = 'aHR0cHM6Ly9ldS5pb3QuZHJlYW1lLnRlY2g6MTMyNjcvZHJlYW1lLXVzZXItaW90L2lvdGZpbGUvZ2V0RG93bmxvYWRVcmw=';
+
+const URLDOWNURL = 'aHR0cHM6Ly9ldS5pb3QubW92YS10ZWNoLmNvbToxMzI2Ny9tb3ZhLXVzZXItaW90L2lvdGZpbGUvZ2V0RG93bmxvYWRVcmw='; // /mova-user-iot/iotfile/getDownloadUrl
 let DH_URLDOWNURL = new Buffer.from(URLDOWNURL, 'base64');
-const URLUSA = 'RHJlYW1lX1NtYXJ0aG9tZS8xLjUuNTkgKGlQaG9uZTsgaU9TIDE2LjA7IFNjYWxlLzMuMDAp';
+
+const URLUSA = 'TW92YV9TbWFydGhvbWUvMS41LjU5IChpUGhvbmU7IGlPUyAxNi4wOyBTY2FsZS8zLjAwKQ=='; // Mova_Smarthome User Agent
 let DH_URLUSA = new Buffer.from(URLUSA, 'base64');
-const URLDRLC = 'MWM4MGIzNzg3YjIyNjY3NzZiY2RjNDgxZjM3ZDhmYTQyYmExMGEzMGFmODFhNmRmLTE=';
+
+const URLDRLC = 'Z2lneGxtcXdaXTdvV1pVRg=='; // Mova RLC Key: gigxlmqwZ]7oWZUF
 let DH_URLDRLC = new Buffer.from(URLDRLC, 'base64');
-const URLAUTH = 'QmFzaWMgWkhKbFlXMWxYMkZ3Y0hZeE9rRlFYbVIyUUhwQVUxRlpWbmhPT0RnPQ==';
+
+const URLAUTH = 'QmFzaWMgYlc5MllWOWhjSEE2VmpkTGIwTm9URmN4ZGtoQlEzRkhZZz09'; // Mova Authorization
 let DH_URLAUTH = new Buffer.from(URLAUTH, 'base64');
-const DHURLSENDA = 'L2RyZWFtZS1pb3QtY29tLQ==';
+
+const DHURLSENDA = 'L21vdmEtaW90LWNvbS0='; // /mova-iot-com-
 let DH_DHURLSENDA = new Buffer.from(DHURLSENDA, 'base64');
-const DHURLSENDB = 'L2RldmljZS9zZW5kQ29tbWFuZA==';
+
+const DHURLSENDB = 'L2RldmljZS9zZW5kQ29tbWFuZA=='; // /device/sendCommand
 let DH_DHURLSENDB = new Buffer.from(DHURLSENDB, 'base64');
-const DHURLSENDDOM = 'LmlvdC5kcmVhbWUudGVjaDoxMzI2Nw==';
+
+const DHURLSENDDOM = 'LmlvdC5tb3ZhLXRlY2guY29tOjEzMjY3'; // .iot.mova-tech.com:13267
 let DH_DHURLSENDDOM = new Buffer.from(DHURLSENDDOM, 'base64');
-const DHURLHIS = 'aHR0cHM6Ly9ldS5pb3QuZHJlYW1lLnRlY2g6MTMyNjcvZHJlYW1lLXVzZXItaW90L2lvdHN0YXR1cy9oaXN0b3J5';
+
+const DHURLHIS = 'aHR0cHM6Ly9ldS5pb3QubW92YS10ZWNoLmNvbToxMzI2Ny9tb3ZhLXVzZXItaW90L2lvdHN0YXR1cy9oaXN0b3J5'; // /mova-user-iot/iotstatus/history
 const DH_DHURLHIS = new Buffer.from(DHURLHIS, 'base64');
-const DHURLGDF = 'aHR0cHM6Ly9ldS5pb3QuZHJlYW1lLnRlY2g6MTMyNjcvZmlsZS1icmlkZ2UvdXNlci9nZXREZWl2aWNlRmlsZQ==';
+
+const DHURLGDF = 'aHR0cHM6Ly9ldS5pb3QubW92YS10ZWNoLmNvbToxMzI2Ny9maWxlLWJyaWRnZS91c2VyL2dldERlaXZpY2VGaWxl'; // /file-bridge/user/getDeiviceFile
 const DH_DHURLGDF = new Buffer.from(DHURLGDF, 'base64');
 
 let DH_Map = {};
@@ -3060,7 +3073,7 @@ let In_path = '';
 let DH_Auth = '',
   DH_AuthRef = '',
   DH_Expires = '',
-  DH_Tenant = '000000',
+  DH_Tenant = '000002',
   DH_Country = 'DE',
   DH_Uid = '',
   DH_Lang = 'de',
@@ -6846,7 +6859,7 @@ class Dreamehome extends utils.Adapter {
 
     try {
       // Baue die URL für History-Endpunkt
-      const historyUrl = `https://${DH_Region}.iot.dreame.tech:13267/dreame-user-iot/iotstatus/history`;
+      const historyUrl = const historyUrl = `https://${DH_Region}.iot.mova-tech.com:13267/mova-user-iot/iotstatus/history`;
 
       const response = await this.DH_URLRequest(historyUrl, params);
       this.log.info(historyUrl + ' | ' + JSON.stringify(response) + ' | Response: ' + JSON.stringify(response.data));
