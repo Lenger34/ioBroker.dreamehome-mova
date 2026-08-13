@@ -4083,6 +4083,7 @@ class Dreamehome extends utils.Adapter {
         'Content-Type': 'application/json',
         'Dreame-Auth': DH_Auth,
         'Dreame-Meta': 'cv=i_829',
+        'Dreame-Rlc': DH_URLDRLC,
       },
       data: SetData,
     }).then(async (response) => {
@@ -6942,6 +6943,7 @@ class Dreamehome extends utils.Adapter {
         'Content-Type': 'application/json',
         'Dreame-Auth': DH_Auth,
         'Dreame-Meta': 'cv=i_829',
+        'Dreame-Rlc': DH_URLDRLC,
       },
       data: SetData,
     }).then(async (response) => {
