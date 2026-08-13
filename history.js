@@ -1387,17 +1387,17 @@ class DreameHistory {
         },
         {
           headers: {
-            'Accept': '*/*',
-            'Accept-Language': 'en-US;q=0.8',
-            'Accept-Encoding': 'gzip, deflate',
-            'User-Agent': this.DH_URLUSA,
-            'Authorization': this.DH_URLAUTH,
-            'Tenant-Id': '000002',
-            'Content-Type': 'application/json',
-            'Dreame-Auth': this.DH_Auth,
-            'Dreame-Rlc': this.DH_URLDRLC,
-            'Dreame-Meta': 'cv=i_829'
-          },
+                      'Accept': '*/*',
+                      'Accept-Language': 'en-US;q=0.8',
+                      'Accept-Encoding': 'gzip, deflate',
+                      'User-Agent': 'Dart/3.2 (dart:io)',
+                      'Authorization': this.DH_URLAUTH,
+                      'Tenant-Id': '000002',
+                      'Content-Type': 'application/json',
+                      'Dreame-Auth': 'bearer ' + this.DH_Auth,
+                      'Dreame-Meta': 'cv=i_829',
+                      'Dreame-Rlc': this.DH_URLDRLC
+                    },
           timeout: 15000,
           responseType: 'arraybuffer'
         }
