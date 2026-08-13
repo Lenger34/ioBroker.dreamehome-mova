@@ -3047,10 +3047,11 @@ let DH_URLDOWNURL = new Buffer.from(URLDOWNURL, 'base64');
 const URLUSA = 'TW92YV9TbWFydGhvbWUvMS41LjU5IChpUGhvbmU7IGlPUyAxNi4wOyBTY2FsZS8zLjAwKQ=='; // Mova_Smarthome User Agent
 let DH_URLUSA = new Buffer.from(URLUSA, 'base64');
 
-const URLDRLC = 'Z2lneGxtcXdaXTdvV1pVRg=='; // Mova RLC Key
-let DH_URLDRLC = new Buffer.from(URLDRLC, 'base64');
+// === MOVA RLC DYNAMIC ENCRYPTION ===
+const rlcCipher = createCipheriv('aes-128-ecb', 'gigxlmqwZ]7oWZUF', null);
+let DH_URLDRLC = rlcCipher.update('eu|en|DE', 'utf8', 'hex');
+DH_URLDRLC += rlcCipher.final('hex');
 
-// THIS IS THE FIXED LINE! Notice the "c4" instead of "N4" in the middle.
 const URLAUTH = 'QmFzaWMgYlc5MllWOWhjSEE2VmpkTGIwTm9URmM4ZGtoQlEzRkhZZz09'; // Mova Authorization
 let DH_URLAUTH = new Buffer.from(URLAUTH, 'base64');
 
@@ -3710,7 +3711,8 @@ class Dreamehome extends utils.Adapter {
         'Accept-Language': 'en-US;q=0.8',
         'Accept-Encoding': 'gzip, deflate',
         'User-Agent': DH_URLUSA,
-        'Mova-Rlc': DH_URLDRLC,
+        'Dreame-Rlc': DH_URLDRLC,
+        'Dreame-Meta': 'cv=i_829',
         'Authorization': DH_URLAUTH,
         'Tenant-Id': DH_Tenant,
       },
@@ -4079,7 +4081,8 @@ class Dreamehome extends utils.Adapter {
         'Authorization': DH_URLAUTH,
         'Tenant-Id': DH_Tenant,
         'Content-Type': 'application/json',
-        'Mova-Auth': DH_Auth,
+        'Dreame-Auth': DH_Auth,
+        'Dreame-Meta': 'cv=i_829',
       },
       data: SetData,
     }).then(async (response) => {
@@ -6937,7 +6940,8 @@ class Dreamehome extends utils.Adapter {
         'Authorization': DH_URLAUTH,
         'Tenant-Id': DH_Tenant,
         'Content-Type': 'application/json',
-        'Mova-Auth': DH_Auth,
+        'Dreame-Auth': DH_Auth,
+        'Dreame-Meta': 'cv=i_829',
       },
       data: SetData,
     }).then(async (response) => {
@@ -10201,9 +10205,10 @@ class Dreamehome extends utils.Adapter {
         'Accept-Language': 'en-US;q=0.8',
         'Accept-Encoding': 'gzip, deflate',
         'User-Agent': DH_URLUSA,
-        'Mova-Rlc': DH_URLDRLC,
+        'Dreame-Rlc': DH_URLDRLC,
         'Authorization': DH_URLAUTH,
         'Tenant-Id': DH_Tenant,
+        'Dreame-Meta': 'cv=i_829',
       },
       data: {
         grant_type: 'password',

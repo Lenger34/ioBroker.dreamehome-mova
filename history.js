@@ -1392,10 +1392,11 @@ class DreameHistory {
             'Accept-Encoding': 'gzip, deflate',
             'User-Agent': this.DH_URLUSA,
             'Authorization': this.DH_URLAUTH,
-            'Tenant-Id': '000000',
+            'Tenant-Id': '000002',
             'Content-Type': 'application/json',
-            'Mova-Auth': this.DH_Auth,
-            'Mova-Rlc': this.DH_URLDRLC
+            'Dreame-Auth': this.DH_Auth,
+            'Dreame-Rlc': this.DH_URLDRLC,
+            'Dreame-Meta': 'cv=i_829'
           },
           timeout: 15000,
           responseType: 'arraybuffer'
