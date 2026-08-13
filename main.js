@@ -3152,7 +3152,7 @@ class Dreamehome extends utils.Adapter {
   constructor(options) {
     super({
       ...options,
-      name: 'dreamehome',
+      name: 'dreamehome-mova',
     });
     this.on('ready', this.onReady.bind(this));
     this.on('stateChange', this.onStateChange.bind(this));
@@ -10180,7 +10180,7 @@ class Dreamehome extends utils.Adapter {
     const GetAdapterPath = this.config.selectedDeviceIndex;
 
 
-    const prefix = `dreamehome.${GetAdapterPath}.${DH_Did}.map.${DH_CurMap}`;
+    const prefix = `dreamehome-mova.${GetAdapterPath}.${DH_Did}.map.${DH_CurMap}`;
     const pattern = `dreamehome.${GetAdapterPath}.${DH_Did}.map.${DH_CurMap}.${roomName}.CleanCarpet*`;
     const objects = await this.getObjectViewAsync('system', 'state', {
       startkey: pattern.replace('*', ''),
@@ -12631,7 +12631,7 @@ class Dreamehome extends utils.Adapter {
           }
           const GetAdapterPath = anyKey.split('.')[1]; // e.g. "0"
 
-          const prefix = `dreamehome.${GetAdapterPath}.${DH_Did}.map.${DH_CurMap}`;
+          const prefix = `dreamehome-mova.${GetAdapterPath}.${DH_Did}.map.${DH_CurMap}`;
 
           // Get the last Alexa device used
           const LastAlexa = await this.getForeignStateAsync('alexa2.0.History.serialNumber');
@@ -12642,7 +12642,7 @@ class Dreamehome extends utils.Adapter {
           //this.log.info('Get all Rooms: ' + JSON.stringify(mapData));
 
           // Load cleanset fallback data
-          const cleansetState = await this.getStateAsync(`dreamehome.${GetAdapterPath}.${DH_Did}.mqtt.cleanset`);
+          const cleansetState = await this.getStateAsync(`dreamehome-mova.${GetAdapterPath}.${DH_Did}.mqtt.cleanset`);
           let cleanset = {};
           if (cleansetState?.val && typeof cleansetState.val === 'string' && cleansetState.val.trim() !== '') {
             try {
