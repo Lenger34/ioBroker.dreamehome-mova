@@ -3052,7 +3052,7 @@ const rlcCipher = createCipheriv('aes-128-ecb', 'gigxlmqwZ]7oWZUF', null);
 let DH_URLDRLC = rlcCipher.update('eu|en|DE', 'utf8', 'hex');
 DH_URLDRLC += rlcCipher.final('hex');
 
-const URLAUTH = 'QmFzaWMgYlc5MllWOWhjSEE2VmpkTGIwTm9URmM4ZGtoQlEzRkhZZz09'; // Mova Authorization
+const URLAUTH = 'QmFzaWMgYlc5MllWOWhjSEE2VmpkTGIwTm9URmM0ZGtoQlEzRkhZZz09'; // Mova Authorization
 let DH_URLAUTH = new Buffer.from(URLAUTH, 'base64');
 
 const DHURLSENDA = 'L2RyZWFtZS1pb3QtY29tLQ=='; // /dreame-iot-com-
